@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <title>root : ssmj:\Soupal_Ghosh</title>
+  </head>
+  <body>
+    <canvas id="matrixRain"></canvas>
+    <div id="boot-screen">
+      <pre id="boot-lines">
+    <span>booting...</span>
+    <span>initializing matrix protocol...</span>
+    <span>authenticating user...</span>
+    <span>access granted ✅</span>
+    <span>Welcome to Soupal's Portfolio</span>
+  </pre>
+    </div>
+
+    <div id="main-content" class="hidden">
+      <div class="nam">
+        <h1 class="typewriter" id="desktop-welcome">
+          Welcome Soupal Ghosh this side !!
+        </h1>
+        <h1 class="typewriter mobile-welcome">Soupal Ghosh here !</h1>
+      </div>
+      <!-- Terminal Section -->
+      <div class="container">
+        <div class="box-container">
+          <section class="terminal-section" id="terminal-box">
+            <h2 class="glitch" data-text="$ terminal">
+              $ terminal
+              <span class="info-icon-container">
+                <img src="info.png" alt="info" class="info-icon" />
+                <span class="tooltip-text">
+                  Valid Commands:<br />
+                  { "about", "skills", "projects", "hackathons", "stats",
+                  "contact", "clear" }
+                </span>
+              </span>
+            </h2>
+
+            <div class="fake-terminal">
+              <div class="output" id="terminal-output"></div>
+
+              <!-- Enhanced terminal input with visual autocomplete -->
+              <div id="terminal-wrapper">
+                <span class="prompt">&gt; </span>
+                <span id="typed"></span><span id="ghost" class="ghost"></span>
+                <input
+                  type="text"
+                  id="terminal-input"
+                  placeholder="Type a command (e.g. about)"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- whoami -->
+        <div class="box-container">
+          <header class="terminal-section">
+            <h1 class="glitch" data-text="$ whoami" id="about">
+              $ whoami <span class="blinking-cursor"></span>
+            </h1>
+            <p>
+              &gt; Armed with AI , I build in silence, debug in the dark. Fueled
+              by caffeine and curiosity, I craft code that speaks louder than
+              words. From Front-End finesse, Back-End logic to Machine
+              Learning..I bend them to my will. DSA, side projects and
+              late-night commits — this is my grind. Welcome to my digital lair
+              !!
+            </p>
+          </header>
+        </div>
+
+        <!-- skills -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ skills" id="skills">$ skills</h2>
+            <p>
+              &gt; HTML, CSS, Bootstrap, JavaScript, Python, Java, C, ML, DSA,
+              DL
+            </p>
+          </section>
+        </div>
+
+        <!-- projects -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ projects" id="projects">
+              $ projects
+            </h2>
+            <div class="project">&gt; DoverBeach E-commerce Website</div>
+            <div class="project">&gt; EagleEye</div>
+            <div class="project">&gt; Chatbot</div>
+          </section>
+        </div>
+
+        <!-- hackathons -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ hackathons" id="hackathons">
+              $ hackathons
+            </h2>
+            <div class="hackathon">&gt; SIH participant</div>
+            <div class="hackathon">
+              &gt; AI : Code The Future - 3rd Runner Up
+            </div>
+          </section>
+        </div>
+
+        <!-- coding platform stats -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ coding platforms stats" id="stats">
+              $ coding platforms stats
+            </h2>
+            <p>
+              <a href="https://leetcode.com/u/soupalghosh15/" target="_blank"
+                >&gt; LeetCode</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://www.hackerrank.com/profile/soupalghosh15"
+                target="_blank"
+                >&gt; HackerRank</a
+              >
+            </p>
+            <p>
+              <a href="https://github.com/Soupal-Ghosh" target="_blank"
+                >&gt; GitHub</a
+              >
+            </p>
+          </section>
+        </div>
+
+        <!-- footer -->
+        <div class="box-container">
+          <footer class="footer" id="contact">
+            <p>Made by Me ... Reach me at</p>
+            <div class="icon-group">
+              <a
+                href="https://www.linkedin.com/in/soupal-ghosh-2a6a9b290"
+                target="_blank"
+              >
+                <img src="linkedin.png" alt="LinkedIn" class="footer-icon" />
+              </a>
+              <a href="mailto:soupalghosh15@gmail.com">
+                <img src="mail.png" alt="Email" class="footer-icon" />
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
