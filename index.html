@@ -1,323 +1,401 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Soupal Ghosh — ML & Full Stack Developer. Building AI-powered web apps with Python, PyTorch, JavaScript, and Node.js." />
-  <link rel="stylesheet" href="portfolio.css" />
-  <title>Soupal Ghosh | ML & Full Stack Developer</title>
-  <style>
-    .hire-btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 28px;
-      border: 2px solid #00ff41;
-      color: #00ff41;
-      background: transparent;
-      font-family: inherit;
-      font-size: 1rem;
-      letter-spacing: 2px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-    .hire-btn:hover { background: #00ff41; color: #000; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Soupal Ghosh — ML & Full Stack Developer. Building AI-powered web apps with Python, PyTorch, JavaScript, and Node.js."
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+    <title>Soupal Ghosh | ML & Full Stack Developer</title>
+    <style>
+      .hire-btn {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 28px;
+        border: 2px solid #00ff41;
+        color: #00ff41;
+        background: transparent;
+        font-family: inherit;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .hire-btn:hover {
+        background: #00ff41;
+        color: #000;
+      }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-      margin-top: 8px;
-    }
-    .skill-group p { margin: 2px 0; font-size: 0.85rem; opacity: 0.75; }
-    .skill-group strong { color: #00ff41; font-size: 0.8rem; letter-spacing: 1px; }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        margin-top: 8px;
+      }
+      .skill-group p {
+        margin: 2px 0;
+        font-size: 0.85rem;
+        opacity: 0.75;
+      }
+      .skill-group strong {
+        color: #00ff41;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
 
-    .project-desc {
-      font-size: 0.8rem;
-      opacity: 0.6;
-      margin-left: 16px;
-      margin-bottom: 8px;
-    }
+      .project-desc {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        margin-left: 16px;
+        margin-bottom: 8px;
+      }
 
-    .hackathon-win { color: #ffd700; font-weight: bold; }
+      .hackathon-win {
+        color: #ffd700;
+        font-weight: bold;
+      }
 
-    .badge-ongoing {
-      font-size: 0.72rem;
-      border: 1px solid #888;
-      color: #888;
-      padding: 1px 6px;
-      margin-left: 8px;
-      border-radius: 3px;
-      vertical-align: middle;
-    }
-    .badge-research {
-      font-size: 0.72rem;
-      border: 1px solid #00bfff;
-      color: #00bfff;
-      padding: 1px 6px;
-      margin-left: 8px;
-      border-radius: 3px;
-      vertical-align: middle;
-    }
+      .badge-ongoing {
+        font-size: 0.72rem;
+        border: 1px solid #888;
+        color: #888;
+        padding: 1px 6px;
+        margin-left: 8px;
+        border-radius: 3px;
+        vertical-align: middle;
+      }
+      .badge-research {
+        font-size: 0.72rem;
+        border: 1px solid #00bfff;
+        color: #00bfff;
+        padding: 1px 6px;
+        margin-left: 8px;
+        border-radius: 3px;
+        vertical-align: middle;
+      }
 
-    /* Certifications */
-    .cert-item {
-      margin-bottom: 6px;
-    }
-    .cert-item .cert-issuer {
-      font-size: 0.78rem;
-      opacity: 0.55;
-      margin-left: 16px;
-    }
+      /* Certifications */
+      .cert-item {
+        margin-bottom: 6px;
+      }
+      .cert-item .cert-issuer {
+        font-size: 0.78rem;
+        opacity: 0.55;
+        margin-left: 16px;
+      }
 
-    /* Education */
-    .edu-detail {
-      margin-left: 16px;
-      font-size: 0.85rem;
-      opacity: 0.75;
-      margin-top: 4px;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-<body>
-  <canvas id="matrixRain"></canvas>
+      /* Education */
+      .edu-detail {
+        margin-left: 16px;
+        font-size: 0.85rem;
+        opacity: 0.75;
+        margin-top: 4px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="matrixRain"></canvas>
 
-  <div id="boot-screen">
-    <pre id="boot-lines">
+    <div id="boot-screen">
+      <pre id="boot-lines">
 <span>booting...</span>
 <span>initializing matrix protocol...</span>
 <span>authenticating user...</span>
 <span>access granted ✅</span>
 <span>Welcome to Soupal's Portfolio</span>
     </pre>
-  </div>
-
-  <div id="main-content" class="hidden">
-    <div class="nam">
-      <h1 class="typewriter" id="desktop-welcome">Welcome Soupal Ghosh this side !!</h1>
-      <h1 class="typewriter mobile-welcome">Soupal Ghosh here !</h1>
     </div>
 
-    <!-- Terminal Section -->
-    <div class="container">
-      <div class="box-container">
-        <section class="terminal-section" id="terminal-box">
-          <h2 class="glitch" data-text="$ terminal">
-            $ terminal
-            <span class="info-icon-container">
-              <img src="info.png" alt="info" class="info-icon" />
-              <span class="tooltip-text">
-                Valid Commands:<br />
-                { "about", "education", "skills", "projects", "hackathons", "certifications", "stats", "contact", "clear" }
+    <div id="main-content" class="hidden">
+      <div class="nam">
+        <h1 class="typewriter" id="desktop-welcome">
+          Welcome Soupal Ghosh this side !!
+        </h1>
+        <h1 class="typewriter mobile-welcome">Soupal Ghosh here !</h1>
+      </div>
+
+      <!-- Terminal Section -->
+      <div class="container">
+        <div class="box-container">
+          <section class="terminal-section" id="terminal-box">
+            <h2 class="glitch" data-text="$ terminal">
+              $ terminal
+              <span class="info-icon-container">
+                <img src="info.png" alt="info" class="info-icon" />
+                <span class="tooltip-text">
+                  Valid Commands:<br />
+                  { "about", "education", "skills", "projects", "hackathons",
+                  "certifications", "stats", "contact", "clear" }
+                </span>
               </span>
-            </span>
-          </h2>
-          <div class="fake-terminal">
-            <div class="output" id="terminal-output"></div>
-            <div id="terminal-wrapper">
-              <span class="prompt">&gt; </span>
-              <span id="typed"></span><span id="ghost" class="ghost"></span>
-              <input
-                type="text"
-                id="terminal-input"
-                placeholder="Type a command (e.g. about)"
-                autocomplete="off"
-              />
+            </h2>
+            <div class="fake-terminal">
+              <div class="output" id="terminal-output"></div>
+              <div id="terminal-wrapper">
+                <span class="prompt">&gt; </span>
+                <span id="typed"></span><span id="ghost" class="ghost"></span>
+                <input
+                  type="text"
+                  id="terminal-input"
+                  placeholder="Type a command (e.g. about)"
+                  autocomplete="off"
+                />
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- whoami -->
+        <div class="box-container">
+          <header class="terminal-section">
+            <h1 class="glitch" data-text="$ whoami" id="about">
+              $ whoami <span class="blinking-cursor"></span>
+            </h1>
+            <p>
+              &gt; Armed with AI, I build in silence, debug in the dark. Fueled
+              by caffeine and curiosity, I craft code that speaks louder than
+              words. CS undergrad specializing in deep learning, computer
+              vision, and full-stack web development — from ResNet pipelines to
+              production-deployed web apps. Late-night commits, real-world
+              systems. Welcome to my digital lair !!
+            </p>
+            <a href="mailto:soupalghosh15@gmail.com" class="hire-btn"
+              >&gt; Hire Me</a
+            >
+            <a href="SoupalGhosh_CV.pdf" download class="hire-btn">
+              &gt; Download CV
+            </a>
+          </header>
+        </div>
+
+        <!-- Education (NEW from CV) -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ education" id="education">
+              $ education
+            </h2>
+            <div class="cert-item">
+              &gt; B.Tech — Computer Science &amp; Engineering (AI/ML)
+              <div class="edu-detail">
+                Institute of Engineering &amp; Management, Kolkata &nbsp;·&nbsp;
+                2023 – 2027<br />
+                CGPA: <strong>8.576 / 10</strong><br />
+                Coursework: Deep Learning · DBMS · Object-Oriented Programming
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Skills (fully updated from CV) -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ skills" id="skills">$ skills</h2>
+            <div class="skills-grid">
+              <div class="skill-group">
+                <strong>&gt; LANGUAGES</strong>
+                <p>Python, JavaScript</p>
+                <p>Java, C</p>
+                <p>HTML, CSS</p>
+              </div>
+              <div class="skill-group">
+                <strong>&gt; ML / AI</strong>
+                <p>PyTorch, TensorFlow, Keras</p>
+                <p>scikit-learn, OpenCV</p>
+                <p>ResNet, ArcFace</p>
+                <p>NumPy, Pandas, Matplotlib</p>
+              </div>
+              <div class="skill-group">
+                <strong>&gt; NLP / SPEECH</strong>
+                <p>OpenAI Whisper</p>
+                <p>Google Speech API</p>
+              </div>
+              <div class="skill-group">
+                <strong>&gt; WEB / BACKEND</strong>
+                <p>Node.js, REST APIs</p>
+                <p>MySQL</p>
+                <p>Render (deployment)</p>
+              </div>
+              <div class="skill-group">
+                <strong>&gt; TOOLS</strong>
+                <p>GitHub, VS Code</p>
+                <p>GitHub Copilot, Cursor</p>
+                <p>Claude, ChatGPT</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Projects (fully updated from CV) -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ projects" id="projects">
+              $ projects
+            </h2>
+
+            <div class="project">
+              <a href="https://aurawall.onrender.com/" target="_blank">
+                &gt; AuraWall — AI-powered wallpaper generator
+              </a>
+              <p class="project-desc">
+                Full-stack platform with prompt-based AI image generation ·
+                Node.js + REST API backend · HTML/CSS/JS frontend · Deployed on
+                Render
+              </p>
+            </div>
+
+            <div class="project">
+              <a
+                href="https://github.com/Soupal-Ghosh/Eye-Disease"
+                target="_blank"
+              >
+                &gt; Eye Disease Detection — Deep learning classifier
+              </a>
+              <p class="project-desc">
+                Fine-tuned ResNet-50 on fundus images for retinal disease
+                classification · PyTorch · Data augmentation · Accuracy &amp;
+                confusion matrix evaluation
+              </p>
+            </div>
+
+            <div class="project">
+              &gt; Voice-Aided Face Recognition System
+              <span class="badge-research">paper in prep</span>
+              <p class="project-desc">
+                Real-time face recognition (CCTV / webcam / video) with
+                voice-activated search · SCRFD detection + ArcFace (ResNet-100)
+                512-dim embeddings · Google Speech API + OpenAI Whisper ·
+                Python, OpenCV
+              </p>
+            </div>
+
+            <div class="project">
+              &gt; GitHub Repository Analyzer
+              <span class="badge-ongoing">in progress</span>
+              <p class="project-desc">
+                Analytics tool using GitHub REST API to visualize commit
+                activity, contributor stats &amp; codebase health metrics ·
+                Python, Data Visualization
+              </p>
+            </div>
+
+            <div class="project">
+              &gt; Image Restoration using Autoencoders
+              <span class="badge-ongoing">in progress</span>
+              <p class="project-desc">
+                Convolutional autoencoder to reconstruct degraded/occluded
+                images · Denoising techniques &amp; reconstruction loss
+                experimentation · PyTorch
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Hackathons -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ hackathons" id="hackathons">
+              $ hackathons
+            </h2>
+            <div class="hackathon">
+              &gt; SIH (Smart India Hackathon) — Participant
+            </div>
+            <div class="hackathon hackathon-win">
+              🏆 &gt; AI : Code The Future — 3rd Runner Up
+            </div>
+          </section>
+        </div>
+
+        <!-- Certifications (NEW from CV) -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ certifications" id="certifications">
+              $ certifications
+            </h2>
+
+            <div class="cert-item">
+              &gt; Neural Networks and Deep Learning
+              <div class="cert-issuer">DeepLearning.AI · May 2025</div>
+            </div>
+            <div class="cert-item">
+              &gt; Improving Deep Neural Networks: Hyperparameter Tuning,
+              Regularization &amp; Optimization
+              <div class="cert-issuer">DeepLearning.AI · May 2025</div>
+            </div>
+            <div class="cert-item">
+              &gt; Structuring Machine Learning Projects
+              <div class="cert-issuer">DeepLearning.AI · May 2025</div>
+            </div>
+            <div class="cert-item">
+              &gt; Convolutional Neural Networks
+              <div class="cert-issuer">DeepLearning.AI · Dec 2025</div>
+            </div>
+            <div class="cert-item">
+              &gt; Python (Basic) &nbsp;·&nbsp; SQL (Basic) &nbsp;·&nbsp; Java
+              (Basic) &nbsp;·&nbsp; Problem Solving (Basic)
+              <div class="cert-issuer">HackerRank · May 2026</div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Coding platform stats -->
+        <div class="box-container">
+          <section class="terminal-section">
+            <h2 class="glitch" data-text="$ coding platforms stats" id="stats">
+              $ coding platforms stats
+            </h2>
+            <p>
+              <a href="https://leetcode.com/u/soupalghosh15/" target="_blank"
+                >&gt; LeetCode</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://www.hackerrank.com/profile/soupalghosh15"
+                target="_blank"
+                >&gt; HackerRank</a
+              >
+            </p>
+            <p>
+              <a href="https://github.com/Soupal-Ghosh" target="_blank"
+                >&gt; GitHub</a
+              >
+            </p>
+          </section>
+        </div>
+
+        <!-- Footer -->
+        <div class="box-container">
+          <footer class="footer" id="contact">
+            <p>Made by Me ... Reach me at</p>
+            <div class="icon-group">
+              <a
+                href="https://www.linkedin.com/in/soupal-ghosh-2a6a9b290"
+                target="_blank"
+              >
+                <img src="linkedin.png" alt="LinkedIn" class="footer-icon" />
+              </a>
+              <a href="mailto:soupalghosh15@gmail.com">
+                <img src="mail.png" alt="Email" class="footer-icon" />
+              </a>
+            </div>
+            <a
+              href="mailto:soupalghosh15@gmail.com"
+              class="hire-btn"
+              style="margin-top: 16px"
+              >&gt; Get In Touch</a
+            >
+          </footer>
+        </div>
       </div>
     </div>
-
-    <div class="container">
-
-      <!-- whoami -->
-      <div class="box-container">
-        <header class="terminal-section">
-          <h1 class="glitch" data-text="$ whoami" id="about">
-            $ whoami <span class="blinking-cursor"></span>
-          </h1>
-          <p>
-            &gt; Armed with AI, I build in silence, debug in the dark. Fueled by caffeine and
-            curiosity, I craft code that speaks louder than words. CS undergrad specializing in
-            deep learning, computer vision, and full-stack web development — from ResNet pipelines
-            to production-deployed web apps. Late-night commits, real-world systems. Welcome to my
-            digital lair !!
-          </p>
-          <a href="mailto:soupalghosh15@gmail.com" class="hire-btn">&gt; Hire Me</a>
-        </header>
-      </div>
-
-      <!-- Education (NEW from CV) -->
-      <div class="box-container">
-        <section class="terminal-section">
-          <h2 class="glitch" data-text="$ education" id="education">$ education</h2>
-          <div class="cert-item">
-            &gt; B.Tech — Computer Science &amp; Engineering (AI/ML)
-            <div class="edu-detail">
-              Institute of Engineering &amp; Management, Kolkata &nbsp;·&nbsp; 2023 – 2027<br/>
-              CGPA: <strong>8.576 / 10</strong><br/>
-              Coursework: Deep Learning · DBMS · Object-Oriented Programming
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- Skills (fully updated from CV) -->
-      <div class="box-container">
-        <section class="terminal-section">
-          <h2 class="glitch" data-text="$ skills" id="skills">$ skills</h2>
-          <div class="skills-grid">
-            <div class="skill-group">
-              <strong>&gt; LANGUAGES</strong>
-              <p>Python, JavaScript</p>
-              <p>Java, C</p>
-              <p>HTML, CSS</p>
-            </div>
-            <div class="skill-group">
-              <strong>&gt; ML / AI</strong>
-              <p>PyTorch, TensorFlow, Keras</p>
-              <p>scikit-learn, OpenCV</p>
-              <p>ResNet, ArcFace</p>
-              <p>NumPy, Pandas, Matplotlib</p>
-            </div>
-            <div class="skill-group">
-              <strong>&gt; NLP / SPEECH</strong>
-              <p>OpenAI Whisper</p>
-              <p>Google Speech API</p>
-            </div>
-            <div class="skill-group">
-              <strong>&gt; WEB / BACKEND</strong>
-              <p>Node.js, REST APIs</p>
-              <p>MySQL</p>
-              <p>Render (deployment)</p>
-            </div>
-            <div class="skill-group">
-              <strong>&gt; TOOLS</strong>
-              <p>GitHub, VS Code</p>
-              <p>GitHub Copilot, Cursor</p>
-              <p>Claude, ChatGPT</p>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- Projects (fully updated from CV) -->
-      <div class="box-container">
-        <section class="terminal-section">
-          <h2 class="glitch" data-text="$ projects" id="projects">$ projects</h2>
-
-          <div class="project">
-            <a href="https://aurawall.onrender.com/" target="_blank">
-              &gt; AuraWall — AI-powered wallpaper generator
-            </a>
-            <p class="project-desc">
-              Full-stack platform with prompt-based AI image generation · Node.js + REST API backend · HTML/CSS/JS frontend · Deployed on Render
-            </p>
-          </div>
-
-          <div class="project">
-            <a href="https://github.com/Soupal-Ghosh/Eye-Disease" target="_blank">
-              &gt; Eye Disease Detection — Deep learning classifier
-            </a>
-            <p class="project-desc">
-              Fine-tuned ResNet-50 on fundus images for retinal disease classification · PyTorch · Data augmentation · Accuracy &amp; confusion matrix evaluation
-            </p>
-          </div>
-
-          <div class="project">
-            &gt; Voice-Aided Face Recognition System
-            <span class="badge-research">paper in prep</span>
-            <p class="project-desc">
-              Real-time face recognition (CCTV / webcam / video) with voice-activated search · SCRFD detection + ArcFace (ResNet-100) 512-dim embeddings · Google Speech API + OpenAI Whisper · Python, OpenCV
-            </p>
-          </div>
-
-          <div class="project">
-            &gt; GitHub Repository Analyzer
-            <span class="badge-ongoing">in progress</span>
-            <p class="project-desc">
-              Analytics tool using GitHub REST API to visualize commit activity, contributor stats &amp; codebase health metrics · Python, Data Visualization
-            </p>
-          </div>
-
-          <div class="project">
-            &gt; Image Restoration using Autoencoders
-            <span class="badge-ongoing">in progress</span>
-            <p class="project-desc">
-              Convolutional autoencoder to reconstruct degraded/occluded images · Denoising techniques &amp; reconstruction loss experimentation · PyTorch
-            </p>
-          </div>
-
-        </section>
-      </div>
-
-      <!-- Hackathons -->
-      <div class="box-container">
-        <section class="terminal-section">
-          <h2 class="glitch" data-text="$ hackathons" id="hackathons">$ hackathons</h2>
-          <div class="hackathon">&gt; SIH (Smart India Hackathon) — Participant</div>
-          <div class="hackathon hackathon-win">🏆 &gt; AI : Code The Future — 3rd Runner Up</div>
-        </section>
-      </div>
-
-      <!-- Certifications (NEW from CV) -->
-      <div class="box-container">
-        <section class="terminal-section">
-          <h2 class="glitch" data-text="$ certifications" id="certifications">$ certifications</h2>
-
-          <div class="cert-item">
-            &gt; Neural Networks and Deep Learning
-            <div class="cert-issuer">DeepLearning.AI · May 2025</div>
-          </div>
-          <div class="cert-item">
-            &gt; Improving Deep Neural Networks: Hyperparameter Tuning, Regularization &amp; Optimization
-            <div class="cert-issuer">DeepLearning.AI · May 2025</div>
-          </div>
-          <div class="cert-item">
-            &gt; Structuring Machine Learning Projects
-            <div class="cert-issuer">DeepLearning.AI · May 2025</div>
-          </div>
-          <div class="cert-item">
-            &gt; Convolutional Neural Networks
-            <div class="cert-issuer">DeepLearning.AI · Dec 2025</div>
-          </div>
-          <div class="cert-item">
-            &gt; Python (Basic) &nbsp;·&nbsp; SQL (Basic) &nbsp;·&nbsp; Java (Basic) &nbsp;·&nbsp; Problem Solving (Basic)
-            <div class="cert-issuer">HackerRank · May 2026</div>
-          </div>
-        </section>
-      </div>
-
-      <!-- Coding platform stats -->
-      <div class="box-container">
-        <section class="terminal-section">
-          <h2 class="glitch" data-text="$ coding platforms stats" id="stats">$ coding platforms stats</h2>
-          <p><a href="https://leetcode.com/u/soupalghosh15/" target="_blank">&gt; LeetCode</a></p>
-          <p><a href="https://www.hackerrank.com/profile/soupalghosh15" target="_blank">&gt; HackerRank</a></p>
-          <p><a href="https://github.com/Soupal-Ghosh" target="_blank">&gt; GitHub</a></p>
-        </section>
-      </div>
-
-      <!-- Footer -->
-      <div class="box-container">
-        <footer class="footer" id="contact">
-          <p>Made by Me ... Reach me at</p>
-          <div class="icon-group">
-            <a href="https://www.linkedin.com/in/soupal-ghosh-2a6a9b290" target="_blank">
-              <img src="linkedin.png" alt="LinkedIn" class="footer-icon" />
-            </a>
-            <a href="mailto:soupalghosh15@gmail.com">
-              <img src="mail.png" alt="Email" class="footer-icon" />
-            </a>
-          </div>
-          <a href="mailto:soupalghosh15@gmail.com" class="hire-btn" style="margin-top:16px;">&gt; Get In Touch</a>
-        </footer>
-      </div>
-
-    </div>
-  </div>
-</body>
-<script src="script.js"></script>
+  </body>
+  <script src="script.js"></script>
 </html>
