@@ -36,10 +36,11 @@ This portfolio doubles as a mock terminal — navigate through sections using co
 | Image Restoration via Autoencoders | Convolutional autoencoder for reconstructing degraded/occluded images | In progress |
 
 
-© 2026 Soupal Ghosh. All rights reserved. This code may not be reused, copied, or redistributed without permission.
-
 ## Contact
 
 - 📧 [soupalghosh15@gmail.com](mailto:soupalghosh15@gmail.com)
 - 💼 [LinkedIn](https://www.linkedin.com/in/soupal-ghosh-2a6a9b290)
 - 💻 [GitHub](https://github.com/Soupal-Ghosh)
+
+
+© 2026 Soupal Ghosh. All rights reserved. This repo/code may not be reused, copied, or redistributed without permission.
